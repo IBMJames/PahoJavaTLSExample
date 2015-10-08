@@ -1,5 +1,5 @@
-# EclipsePahoMavenExample
-An example Maven Project that uses Eclipe Paho to publish a message to an MQTT broker over websockets.
+# PahoJavaTLSExample
+An example Maven Project that uses Eclipe Paho Java client to publish a message over a TLS connection.
 
 ## Build and Run
 
@@ -11,10 +11,8 @@ The ```pom.xml``` file currently references the Paho SNAPSHOT repository.
 To use the main release, change the repository url to: ```https://repo.eclipse.org/content/repositories/paho-releases/``` and change the dependency version to: ```1.0.2```.
 
 
-## Change the Protocol
-This example publishes a message over websockets by default. To change the protocol, change the server URI in [this](src/main/java/org/eclipse/paho/App.java) source file.
+## Add a new certificate for a different server
+To add a certificat for a different server, add it to the ```src/main/resources``` directory
+then change the line defining ```certificateName``` in [this](src/main/java/org/eclipse/paho/App.java) source file to the new certificate name:
 
- * tcp - Normal TCP Connection
- * ssl - SSL / TLS Connection
- * ws - WebSockets
- * wss - WebSockets over SSL/TLS
+```String certificateName = "iot.eclipse.org.crt";```
