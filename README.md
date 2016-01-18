@@ -16,3 +16,4 @@ To add a certificat for a different server, add it to the ```src/main/resources`
 then change the line defining ```certificateName``` in [this](src/main/java/org/eclipse/paho/App.java) source file to the new certificate name:
 
 ```String certificateName = "iot.eclipse.org.crt";```
+##
